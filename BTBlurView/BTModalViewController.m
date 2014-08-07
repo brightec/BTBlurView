@@ -1,29 +1,24 @@
 //
-//  BTViewController.m
+//  BTModalViewController.m
 //  BTBlurView
 //
 //  Created by Cameron Cooke on 07/08/2014.
 //  Copyright (c) 2014 Brightec Ltd. All rights reserved.
 //
 
-#import "BTViewController.h"
+#import "BTModalViewController.h"
 
 
-@interface BTViewController ()
+@interface BTModalViewController ()
 @end
 
 
-@implementation BTViewController
+@implementation BTModalViewController
 
 
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
-}
-
-
-- (IBAction)unwindSegue:(UIStoryboardSegue *)unwindSegue
-{
 }
 
 

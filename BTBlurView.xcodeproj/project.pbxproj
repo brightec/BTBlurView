@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		129CDE2CBB074680A0347C5B /* libPods-BTBlurView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71912C7F58C7473CA2D39ACE /* libPods-BTBlurView.a */; };
 		7E1971641993E8FA00215E67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1971631993E8FA00215E67 /* Foundation.framework */; };
 		7E1971661993E8FA00215E67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1971651993E8FA00215E67 /* CoreGraphics.framework */; };
 		7E1971681993E8FA00215E67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1971671993E8FA00215E67 /* UIKit.framework */; };
 		7E19716E1993E8FA00215E67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E19716C1993E8FA00215E67 /* InfoPlist.strings */; };
 		7E1971701993E8FA00215E67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E19716F1993E8FA00215E67 /* main.m */; };
 		7E1971741993E8FA00215E67 /* BTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1971731993E8FA00215E67 /* BTAppDelegate.m */; };
-		7E1971771993E8FA00215E67 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1971751993E8FA00215E67 /* Main_iPhone.storyboard */; };
-		7E19717A1993E8FA00215E67 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1971781993E8FA00215E67 /* Main_iPad.storyboard */; };
+		7E1971771993E8FA00215E67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1971751993E8FA00215E67 /* Main.storyboard */; };
 		7E19717D1993E8FA00215E67 /* BTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E19717C1993E8FA00215E67 /* BTViewController.m */; };
 		7E19717F1993E8FA00215E67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E19717E1993E8FA00215E67 /* Images.xcassets */; };
 		7E1971861993E8FA00215E67 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1971851993E8FA00215E67 /* XCTest.framework */; };
@@ -22,6 +22,10 @@
 		7E1971881993E8FA00215E67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1971671993E8FA00215E67 /* UIKit.framework */; };
 		7E1971901993E8FA00215E67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E19718E1993E8FA00215E67 /* InfoPlist.strings */; };
 		7E1971921993E8FA00215E67 /* BTBlurViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1971911993E8FA00215E67 /* BTBlurViewTests.m */; };
+		7E19719E1993EB4D00215E67 /* UIView+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E19719D1993EB4D00215E67 /* UIView+Blur.m */; };
+		7E98A0001993EDE9003BB5B4 /* BTModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E989FFF1993EDE9003BB5B4 /* BTModalViewController.m */; };
+		7E98A0031993F9CF003BB5B4 /* BTBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E98A0021993F9CF003BB5B4 /* BTBlurViewController.m */; };
+		7EFAA1151994166700ABF358 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFAA1141994166700ABF358 /* Reveal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090A578F8B3D4DF4A5196934 /* Pods-BTBlurView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BTBlurView.xcconfig"; path = "Pods/Pods-BTBlurView.xcconfig"; sourceTree = "<group>"; };
+		71912C7F58C7473CA2D39ACE /* libPods-BTBlurView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BTBlurView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E1971601993E8FA00215E67 /* BTBlurView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BTBlurView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E1971631993E8FA00215E67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7E1971651993E8FA00215E67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,8 +51,7 @@
 		7E1971711993E8FA00215E67 /* BTBlurView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BTBlurView-Prefix.pch"; sourceTree = "<group>"; };
 		7E1971721993E8FA00215E67 /* BTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAppDelegate.h; sourceTree = "<group>"; };
 		7E1971731993E8FA00215E67 /* BTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTAppDelegate.m; sourceTree = "<group>"; };
-		7E1971761993E8FA00215E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		7E1971791993E8FA00215E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		7E1971761993E8FA00215E67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E19717B1993E8FA00215E67 /* BTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTViewController.h; sourceTree = "<group>"; };
 		7E19717C1993E8FA00215E67 /* BTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTViewController.m; sourceTree = "<group>"; };
 		7E19717E1993E8FA00215E67 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -55,6 +60,13 @@
 		7E19718D1993E8FA00215E67 /* BTBlurViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BTBlurViewTests-Info.plist"; sourceTree = "<group>"; };
 		7E19718F1993E8FA00215E67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7E1971911993E8FA00215E67 /* BTBlurViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTBlurViewTests.m; sourceTree = "<group>"; };
+		7E19719C1993EB4D00215E67 /* UIView+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Blur.h"; sourceTree = "<group>"; };
+		7E19719D1993EB4D00215E67 /* UIView+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Blur.m"; sourceTree = "<group>"; };
+		7E989FFE1993EDE9003BB5B4 /* BTModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTModalViewController.h; sourceTree = "<group>"; };
+		7E989FFF1993EDE9003BB5B4 /* BTModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTModalViewController.m; sourceTree = "<group>"; };
+		7E98A0011993F9CF003BB5B4 /* BTBlurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBlurViewController.h; sourceTree = "<group>"; };
+		7E98A0021993F9CF003BB5B4 /* BTBlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBlurViewController.m; sourceTree = "<group>"; };
+		7EFAA1141994166700ABF358 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = "../../../../../../Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/Reveal.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +77,8 @@
 				7E1971661993E8FA00215E67 /* CoreGraphics.framework in Frameworks */,
 				7E1971681993E8FA00215E67 /* UIKit.framework in Frameworks */,
 				7E1971641993E8FA00215E67 /* Foundation.framework in Frameworks */,
+				7EFAA1151994166700ABF358 /* Reveal.framework in Frameworks */,
+				129CDE2CBB074680A0347C5B /* libPods-BTBlurView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +102,7 @@
 				7E19718B1993E8FA00215E67 /* BTBlurViewTests */,
 				7E1971621993E8FA00215E67 /* Frameworks */,
 				7E1971611993E8FA00215E67 /* Products */,
+				090A578F8B3D4DF4A5196934 /* Pods-BTBlurView.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,10 +118,12 @@
 		7E1971621993E8FA00215E67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EFAA1141994166700ABF358 /* Reveal.framework */,
 				7E1971631993E8FA00215E67 /* Foundation.framework */,
 				7E1971651993E8FA00215E67 /* CoreGraphics.framework */,
 				7E1971671993E8FA00215E67 /* UIKit.framework */,
 				7E1971851993E8FA00215E67 /* XCTest.framework */,
+				71912C7F58C7473CA2D39ACE /* libPods-BTBlurView.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,12 +131,14 @@
 		7E1971691993E8FA00215E67 /* BTBlurView */ = {
 			isa = PBXGroup;
 			children = (
+				7E19719B1993EB3200215E67 /* Classes */,
 				7E1971721993E8FA00215E67 /* BTAppDelegate.h */,
 				7E1971731993E8FA00215E67 /* BTAppDelegate.m */,
-				7E1971751993E8FA00215E67 /* Main_iPhone.storyboard */,
-				7E1971781993E8FA00215E67 /* Main_iPad.storyboard */,
 				7E19717B1993E8FA00215E67 /* BTViewController.h */,
 				7E19717C1993E8FA00215E67 /* BTViewController.m */,
+				7E989FFE1993EDE9003BB5B4 /* BTModalViewController.h */,
+				7E989FFF1993EDE9003BB5B4 /* BTModalViewController.m */,
+				7E1971751993E8FA00215E67 /* Main.storyboard */,
 				7E19717E1993E8FA00215E67 /* Images.xcassets */,
 				7E19716A1993E8FA00215E67 /* Supporting Files */,
 			);
@@ -155,6 +174,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7E19719B1993EB3200215E67 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7E19719C1993EB4D00215E67 /* UIView+Blur.h */,
+				7E19719D1993EB4D00215E67 /* UIView+Blur.m */,
+				7E98A0011993F9CF003BB5B4 /* BTBlurViewController.h */,
+				7E98A0021993F9CF003BB5B4 /* BTBlurViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E1971951993E8FA00215E67 /* Build configuration list for PBXNativeTarget "BTBlurView" */;
 			buildPhases = (
+				94611433021447FC911EED42 /* Check Pods Manifest.lock */,
 				7E19715C1993E8FA00215E67 /* Sources */,
 				7E19715D1993E8FA00215E67 /* Frameworks */,
 				7E19715E1993E8FA00215E67 /* Resources */,
+				86C21C76C0BA4494A615BE84 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +264,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E19717A1993E8FA00215E67 /* Main_iPad.storyboard in Resources */,
 				7E19717F1993E8FA00215E67 /* Images.xcassets in Resources */,
-				7E1971771993E8FA00215E67 /* Main_iPhone.storyboard in Resources */,
+				7E1971771993E8FA00215E67 /* Main.storyboard in Resources */,
 				7E19716E1993E8FA00215E67 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,13 +280,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		86C21C76C0BA4494A615BE84 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-BTBlurView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94611433021447FC911EED42 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E19715C1993E8FA00215E67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7E19717D1993E8FA00215E67 /* BTViewController.m in Sources */,
+				7E98A0031993F9CF003BB5B4 /* BTBlurViewController.m in Sources */,
+				7E19719E1993EB4D00215E67 /* UIView+Blur.m in Sources */,
 				7E1971741993E8FA00215E67 /* BTAppDelegate.m in Sources */,
+				7E98A0001993EDE9003BB5B4 /* BTModalViewController.m in Sources */,
 				7E1971701993E8FA00215E67 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,20 +354,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		7E1971751993E8FA00215E67 /* Main_iPhone.storyboard */ = {
+		7E1971751993E8FA00215E67 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7E1971761993E8FA00215E67 /* Base */,
 			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		7E1971781993E8FA00215E67 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E1971791993E8FA00215E67 /* Base */,
-			);
-			name = Main_iPad.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		7E19718E1993E8FA00215E67 /* InfoPlist.strings */ = {
@@ -388,26 +447,38 @@
 		};
 		7E1971961993E8FA00215E67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090A578F8B3D4DF4A5196934 /* Pods-BTBlurView.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BTBlurView/BTBlurView-Prefix.pch";
 				INFOPLIST_FILE = "BTBlurView/BTBlurView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		7E1971971993E8FA00215E67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090A578F8B3D4DF4A5196934 /* Pods-BTBlurView.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BTBlurView/BTBlurView-Prefix.pch";
 				INFOPLIST_FILE = "BTBlurView/BTBlurView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -471,6 +542,7 @@
 				7E1971971993E8FA00215E67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7E1971981993E8FA00215E67 /* Build configuration list for PBXNativeTarget "BTBlurViewTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +551,7 @@
 				7E19719A1993E8FA00215E67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 //
-//  BTViewController.h
+//  BTBlurViewController.h
 //  BTBlurView
 //
 //  Created by Cameron Cooke on 07/08/2014.
@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 
-@interface BTViewController : UIViewController
+@interface BTBlurViewController : UIViewController
 @end
