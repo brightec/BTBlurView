@@ -22,9 +22,9 @@
 		7E1971881993E8FA00215E67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1971671993E8FA00215E67 /* UIKit.framework */; };
 		7E1971901993E8FA00215E67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E19718E1993E8FA00215E67 /* InfoPlist.strings */; };
 		7E1971921993E8FA00215E67 /* BTBlurViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1971911993E8FA00215E67 /* BTBlurViewTests.m */; };
-		7E19719E1993EB4D00215E67 /* UIView+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E19719D1993EB4D00215E67 /* UIView+Blur.m */; };
+		7E51A0841994E794008034BF /* BTBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E51A0811994E794008034BF /* BTBlurViewController.m */; };
+		7E51A0851994E794008034BF /* UIView+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E51A0831994E794008034BF /* UIView+Blur.m */; };
 		7E98A0001993EDE9003BB5B4 /* BTModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E989FFF1993EDE9003BB5B4 /* BTModalViewController.m */; };
-		7E98A0031993F9CF003BB5B4 /* BTBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E98A0021993F9CF003BB5B4 /* BTBlurViewController.m */; };
 		7EFAA1151994166700ABF358 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFAA1141994166700ABF358 /* Reveal.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,12 +60,12 @@
 		7E19718D1993E8FA00215E67 /* BTBlurViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BTBlurViewTests-Info.plist"; sourceTree = "<group>"; };
 		7E19718F1993E8FA00215E67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7E1971911993E8FA00215E67 /* BTBlurViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTBlurViewTests.m; sourceTree = "<group>"; };
-		7E19719C1993EB4D00215E67 /* UIView+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Blur.h"; sourceTree = "<group>"; };
-		7E19719D1993EB4D00215E67 /* UIView+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Blur.m"; sourceTree = "<group>"; };
+		7E51A0801994E794008034BF /* BTBlurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTBlurViewController.h; path = Classes/BTBlurViewController.h; sourceTree = "<group>"; };
+		7E51A0811994E794008034BF /* BTBlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTBlurViewController.m; path = Classes/BTBlurViewController.m; sourceTree = "<group>"; };
+		7E51A0821994E794008034BF /* UIView+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Blur.h"; path = "Classes/UIView+Blur.h"; sourceTree = "<group>"; };
+		7E51A0831994E794008034BF /* UIView+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Blur.m"; path = "Classes/UIView+Blur.m"; sourceTree = "<group>"; };
 		7E989FFE1993EDE9003BB5B4 /* BTModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTModalViewController.h; sourceTree = "<group>"; };
 		7E989FFF1993EDE9003BB5B4 /* BTModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTModalViewController.m; sourceTree = "<group>"; };
-		7E98A0011993F9CF003BB5B4 /* BTBlurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBlurViewController.h; sourceTree = "<group>"; };
-		7E98A0021993F9CF003BB5B4 /* BTBlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBlurViewController.m; sourceTree = "<group>"; };
 		7EFAA1141994166700ABF358 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = "../../../../../../Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/Reveal.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,10 +177,10 @@
 		7E19719B1993EB3200215E67 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7E19719C1993EB4D00215E67 /* UIView+Blur.h */,
-				7E19719D1993EB4D00215E67 /* UIView+Blur.m */,
-				7E98A0011993F9CF003BB5B4 /* BTBlurViewController.h */,
-				7E98A0021993F9CF003BB5B4 /* BTBlurViewController.m */,
+				7E51A0801994E794008034BF /* BTBlurViewController.h */,
+				7E51A0811994E794008034BF /* BTBlurViewController.m */,
+				7E51A0821994E794008034BF /* UIView+Blur.h */,
+				7E51A0831994E794008034BF /* UIView+Blur.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -322,10 +322,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E19717D1993E8FA00215E67 /* BTViewController.m in Sources */,
-				7E98A0031993F9CF003BB5B4 /* BTBlurViewController.m in Sources */,
-				7E19719E1993EB4D00215E67 /* UIView+Blur.m in Sources */,
 				7E1971741993E8FA00215E67 /* BTAppDelegate.m in Sources */,
 				7E98A0001993EDE9003BB5B4 /* BTModalViewController.m in Sources */,
+				7E51A0851994E794008034BF /* UIView+Blur.m in Sources */,
+				7E51A0841994E794008034BF /* BTBlurViewController.m in Sources */,
 				7E1971701993E8FA00215E67 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
