@@ -11,7 +11,7 @@
 
 
 @interface BTBlurViewController ()
-@property (nonatomic) GPUImageView *backgroundImageView;
+@property (nonatomic) UIImageView *backgroundImageView;
 @end
 
 
@@ -23,40 +23,20 @@
     [super viewDidLoad];
     
     // preapre the imageview
-    CGRect frame = CGRectInset(self.view.bounds, 20.0f, 100.0f);
-    self.backgroundImageView = [UIView gpuImageViewWithFrame:frame];
-    self.backgroundImageView.center = self.view.center;
-    self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
-    self.backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    
-    frame = self.backgroundImageView.frame;
-    NSLog(@"frame=%@", NSStringFromCGRect(frame));
-    
-    CGFloat contentsX = CGRectGetMinX(frame) / CGRectGetWidth(self.view.bounds);
-    CGFloat contentsY = CGRectGetMinY(frame) / CGRectGetHeight(self.view.bounds);
-    CGFloat contentsW = CGRectGetWidth(frame) / CGRectGetWidth(self.view.bounds);
-    CGFloat contentsH = CGRectGetHeight(frame) / CGRectGetHeight(self.view.bounds);
-    
-    self.backgroundImageView.layer.contentsRect = CGRectMake(contentsX, contentsY, contentsW, contentsH);
-    self.backgroundImageView.layer.contentsScale = contentsW * 2;
-    
-    [self.view insertSubview:self.backgroundImageView atIndex:1];
+    self.backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    self.backgroundImageView.center = self.view.center;    
+    self.backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;;
+    self.backgroundImageView.contentMode = UIViewContentModeCenter;
+    self.backgroundImageView.clipsToBounds = YES;
+    [self.view insertSubview:self.backgroundImageView atIndex:0];
     
     [self updateBlur];
 }
-
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self updateBlur];
-}
-
 
 - (void)updateBlur
 {
     UIView *view = self.presentingViewController.view;
-    [view updateBlurWithImageView:self.backgroundImageView];
+    self.backgroundImageView.image = [view bluredSnapshotImage];
 }
 
 

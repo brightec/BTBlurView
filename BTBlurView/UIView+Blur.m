@@ -11,8 +11,20 @@
 @implementation UIView (Blur)
 
 
+- (GPUImageiOSBlurFilter *)blurFilter
+{
+    static GPUImageiOSBlurFilter *blurFilter;
+    if (blurFilter == nil) {
+        blurFilter = [GPUImageiOSBlurFilter new];
+    }
+    
+    return blurFilter;
+}
+
+
 - (UIImage *)snapshot
 {
+    // does not need to be retina resolution as it will be blured
     UIGraphicsBeginImageContext(self.bounds.size);
     [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -22,25 +34,35 @@
 }
 
 
+- (UIImage *)bluredSnapshotImage
+{
+    return [self bluredSnapshotImageWithBlurRadius:12.0f];
+}
+
+
+- (UIImage *)bluredSnapshotImageWithBlurRadius:(CGFloat)blurRadius
+{
+    GPUImageiOSBlurFilter *blurFilter = [self blurFilter];
+    blurFilter.blurRadiusInPixels = blurRadius;
+    
+    UIImage *bluredImage = [blurFilter imageByFilteringImage:[self snapshot]];
+    return bluredImage;
+}
+
+
+# pragma mark -
+# pragma mark GPUImageView methods 
+
 - (GPUImageView *)updateBlurWithImageView:(GPUImageView *)imageView
 {
-    static GPUImageiOSBlurFilter *blurFilter;
-    if (blurFilter == nil) {
-        blurFilter = [GPUImageiOSBlurFilter new];
-        blurFilter.saturation = 1.5;
-        blurFilter.blurRadiusInPixels = 1;
-    }
-    
-    // used for testing alignments
-    GPUImageSepiaFilter *sepiaFilter = [GPUImageSepiaFilter new];
-
+    GPUImageiOSBlurFilter *blurFilter = [self blurFilter];
     UIImage *snapshot = [self snapshot];
-    
+
     GPUImagePicture *picture = [[GPUImagePicture alloc] initWithImage:snapshot];
-    [picture addTarget:sepiaFilter];
-    [sepiaFilter addTarget:imageView];
+    [picture addTarget:blurFilter];
+    [blurFilter addTarget:imageView];
     [picture processImageWithCompletionHandler:^{
-        [sepiaFilter removeAllTargets];
+        [blurFilter removeAllTargets];
     }];
     
     return imageView;
@@ -50,8 +72,9 @@
 + (GPUImageView *)gpuImageViewWithFrame:(CGRect)frame
 {
     GPUImageView *imageView = [[GPUImageView alloc] initWithFrame:frame];
+    imageView.backgroundColor = [UIColor whiteColor];
     imageView.clipsToBounds = YES;
-    imageView.layer.contentsGravity = kCAGravityTop;
+    imageView.layer.contentsGravity = kCAGravityCenter;
     return imageView;
 }
 
