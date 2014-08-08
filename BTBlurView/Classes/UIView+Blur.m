@@ -44,6 +44,7 @@
 {
     GPUImageiOSBlurFilter *blurFilter = [self blurFilter];
     blurFilter.blurRadiusInPixels = blurRadius;
+    blurFilter.saturation = 1.0f;
     
     UIImage *bluredImage = [blurFilter imageByFilteringImage:[self snapshot]];
     return bluredImage;
