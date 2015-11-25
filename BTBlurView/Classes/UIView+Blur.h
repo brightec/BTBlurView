@@ -10,6 +10,12 @@
 
 
 @interface UIView (Blur)
+
+
++ (BOOL)canBlur;
++ (BOOL)poorGraphicsQuality;
+
+
 // Takes a snapshot of the view
 - (UIImage *)snapshot;
 
@@ -23,4 +29,6 @@
 
 // Helper method to create a configured GPUImageView
 + (GPUImageView *)gpuImageViewWithFrame:(CGRect)frame;
+
+
 @end

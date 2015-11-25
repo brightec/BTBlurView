@@ -6,9 +6,57 @@
 //
 
 #import "UIView+Blur.h"
+#import "SDVersion.h"
 
 
 @implementation UIView (Blur)
+
+
++ (BOOL)poorGraphicsQuality
+{
+    NSSet *graphicsQuality = [NSSet setWithObjects:@"iPad",
+                              @"iPad1,1",
+                              @"iPhone1,1",
+                              @"iPhone1,2",
+                              @"iPhone2,1",
+                              @"iPhone3,1",
+                              @"iPhone3,2",
+                              @"iPhone3,3",
+                              @"iPod1,1",
+                              @"iPod2,1",
+                              @"iPod2,2",
+                              @"iPod3,1",
+                              @"iPod4,1",
+                              @"iPad2,1",
+                              @"iPad2,2",
+                              @"iPad2,3",
+                              @"iPad2,4",
+                              @"iPad3,1",
+                              @"iPad3,2",
+                              @"iPad3,3",
+                              nil];
+    
+    return [graphicsQuality containsObject:[SDVersion deviceName]];
+}
+
+
++ (BOOL)canBlur
+{
+    if ([UIVisualEffectView class] == nil) {
+        return NO;
+    }
+    
+    /*
+     Some older devices that support iOS8 don't actually support
+     bluring and just render a grey box. This method rules out
+     these devices.
+     */
+    if ([self poorGraphicsQuality]) {
+        return NO;
+    }
+    
+    return YES;
+}
 
 
 - (GPUImageiOSBlurFilter *)blurFilter
