@@ -72,13 +72,23 @@
 
 - (UIImage *)snapshot
 {
-    // does not need to be retina resolution as it will be blured
-    UIGraphicsBeginImageContext(self.bounds.size);
-    [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return image;
+    @try {
+        
+        // does not need to be retina resolution as it will be blured
+        UIGraphicsBeginImageContext(self.bounds.size);
+        [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return image;
+        
+    }
+    @catch (NSException *exception) {
+        
+        // catch exceptions as snapshotting is not essential to
+        // the apps funciontality.
+        return nil;
+    }
 }
 
 
@@ -107,6 +117,10 @@
     GPUImageiOSBlurFilter *blurFilter = [self blurFilter];
     UIImage *snapshot = [self snapshot];
 
+    if (snapshot == nil) {
+        return nil;
+    }
+    
     GPUImagePicture *picture = [[GPUImagePicture alloc] initWithImage:snapshot];
     [picture addTarget:blurFilter];
     [blurFilter addTarget:imageView];
